@@ -1,0 +1,76 @@
+/* Reset some default styles */
+body,
+h1,
+h2,
+h3,
+p,
+ul,
+li {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+body {
+  background-image: url("https://i.ibb.co/pyzSrK4/output.jpg"); /* Replace with the actual path to your image */
+  background-size: cover;
+  background-repeat: no-repeat;
+  font-family: Arial, sans-serif;
+  color: #333;
+}
+body {
+  font-family: Arial, sans-serif;
+  background-color: #f4f4f4;
+  color: #333;
+}
+
+/* Navigation styles */
+nav {
+  background-color: #333;
+  padding: 10px 20px;
+}
+
+nav ul {
+  display: flex;
+  justify-content: flex-start;
+}
+
+nav li {
+  margin-right: 20px;
+}
+
+nav a {
+  color: #fff;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+nav a:hover {
+  text-decoration: underline;
+}
+
+/* Main section styles */
+main {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 80vh;
+  /* Makes it fill most of the viewport height */
+}
+
+/* Button styles */
+button {
+  background-color: #007BFF;
+  color: white;
+  border: none;
+  padding: 15px 25px;
+  margin: 10px;
+  font-size: 18px;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+button:hover {
+  background-color: #0056b3;
+}

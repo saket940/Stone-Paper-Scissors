@@ -1,0 +1,129 @@
+body {
+  background-image: url("https://i.ibb.co/pyzSrK4/output.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  font-family: Arial, sans-serif;
+  text-align: center;
+  background-color: #f4f4f4;
+  padding: 20px;
+}
+
+/* Reset basic styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+nav {
+  background-color: #333;
+  padding: 10px;
+}
+
+nav ul {
+  list-style-type: none;
+  text-align: center;
+}
+
+nav ul li {
+  display: inline;
+  margin: 0 15px;
+}
+
+nav ul li a {
+  color: #fff;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+nav ul li a:hover {
+  color: #ff6347;
+}
+
+h1 {
+  font-size: 24px;
+  color: #333;
+}
+
+button {
+  background-color: #fff;
+  border: 2px solid #ccc;
+  padding: 10px;
+  margin: 10px;
+  border-radius: 8px;
+  cursor: pointer;
+  width: 120px;
+  height: 160px;
+  display: inline-block;
+  text-align: center;
+  transition: background-color 0.3s ease;
+}
+
+button:hover {
+  background-color: #e0e0e0;
+}
+
+button img {
+  width: 80px;
+  height: 80px;
+}
+
+button h1 {
+  font-size: 16px;
+  color: #555;
+}
+
+#start {
+  font-size: 16px;
+  color: #fff;
+  background-color: #ff6347;
+  width: 260px;
+  height: 50px;
+}
+
+#h11, #h12 {
+  color: #1a73e8;
+}
+
+#score {
+  margin: 20px auto;
+  width: 50%;
+  border-collapse: collapse;
+}
+
+#score th, #score td {
+  padding: 10px;
+  font-size: 18px;
+  border: 2px solid #444;
+}
+
+#score th {
+  background-color: #333;
+  color: #fff;
+}
+
+#p1score, #p2score {
+  font-size: 24px;
+  font-weight: bold;
+}
+
+/* Responsive Design */
+@media (max-width: 600px) {
+  button {
+    width: 100px;
+    height: 140px;
+  }
+
+  button img {
+    width: 60px;
+    height: 60px;
+  }
+
+  button h1 {
+    font-size: 14px;
+  }
+
+  #alert {
+    width: 220px;
+  }
+}
