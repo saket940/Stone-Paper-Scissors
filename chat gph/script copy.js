@@ -24,6 +24,7 @@ document.getElementById("userimg").addEventListener('click',() =>{
     document.getElementById("p11").innerHTML = "Player - " + document.cookie;
 })
 document.getElementById("start").addEventListener('click', () => {
+    new Audio("click.wav").play();
     document.getElementById("start").disabled = true;
     document.getElementById("start").innerHTML = "Choose any option";
 
@@ -36,7 +37,9 @@ document.getElementById("start").addEventListener('click', () => {
         }
         else{
             disableButtons();
-        handleClick(option);}
+        handleClick(option);
+        new Audio("click.wav").play();
+    }
         setTimeout(enableButtons, 2000);
     }
 
@@ -50,6 +53,7 @@ document.getElementById("repla").addEventListener('click', () =>{
     document.getElementById("start").style.backgroundColor = "tomato";
     document.getElementById("start").innerHTML = "Choose any option";
     document.getElementById("pop").style.display = 'none';
+    new Audio("click.wav").play();
 });
 
 // Disable all buttons
@@ -73,6 +77,9 @@ function resetScores() {
 }
 
 function handleClick(playerChoice) {
+    setTimeout(() => {
+        new Audio("sh.mp3").play();
+    }, 600);
     document.getElementById("start").innerHTML = "Computer choosing...";
     document.getElementById("start").style.backgroundColor = "orange";
 
@@ -137,7 +144,12 @@ console.log(playerScore,computerScore)
     if (playerScore == 5 || computerScore == 5) {
             document.getElementById("pop").style.display = 'block';
             document.getElementById("score").innerHTML = `${playerScore} || ${computerScore}`;
-
+        if(playerScore>computerScore){
+            new Audio("win.mp3").play();
+        }
+        else{
+            new Audio("los.mp3").play();
+        }
 
     }
     return
