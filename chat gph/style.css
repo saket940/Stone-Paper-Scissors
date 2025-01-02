@@ -89,11 +89,16 @@ button h1 {
 }
 
 #score {
-  margin: 20px auto;
+  margin: 10px auto;
   width: 50%;
   border-collapse: collapse;
 }
-
+#repla{
+  margin: 2% auto;
+    width: 60px;
+    padding: 0px;
+    display: block;
+    height: 25px;}
 #score th, #score td {
   padding: 10px;
   font-size: 18px;
@@ -127,6 +132,12 @@ button h1 {
   position: fixed;
   z-index: 10;
 }
+@media (min-width: 450px) {
+  .center {
+    left: 25%;
+    width: 50%;
+}
+}
 /* Responsive Design */
 @media (max-width: 411px) {
   li#user {
@@ -141,6 +152,7 @@ button h1 {
     font-size: 10px;
   }}
 @media (max-width: 600px) {
+  
   button {
     width: 100px;
     height: 140px;
