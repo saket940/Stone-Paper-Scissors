@@ -29,8 +29,14 @@ document.getElementById("start").addEventListener('click', () => {
 
     // Function to handle clicks with a delay
     function delayedClickHandler(option) {
-        disableButtons();
-        handleClick(option);
+        let playerScore = parseInt(document.getElementById("p1score").innerHTML);
+        let computerScore = parseInt(document.getElementById("p2score").innerHTML);
+        if (playerScore == 5 || computerScore == 5) {
+            return
+        }
+        else{
+            disableButtons();
+        handleClick(option);}
         setTimeout(enableButtons, 2000);
     }
 
@@ -38,6 +44,12 @@ document.getElementById("start").addEventListener('click', () => {
     document.getElementById("stone").addEventListener('click', () => delayedClickHandler(1));
     document.getElementById("paper").addEventListener('click', () => delayedClickHandler(2));
     document.getElementById("scissor").addEventListener('click', () => delayedClickHandler(3));
+});
+document.getElementById("repla").addEventListener('click', () =>{
+    resetScores();
+    document.getElementById("start").style.backgroundColor = "tomato";
+    document.getElementById("start").innerHTML = "Choose any option";
+    document.getElementById("pop").style.display = 'none';
 });
 
 // Disable all buttons
@@ -123,17 +135,11 @@ function updateScore(winner) {
     }
 console.log(playerScore,computerScore)
     if (playerScore == 5 || computerScore == 5) {
-            document.getElementById("stone").disabled = true;
-            document.getElementById("paper").disabled = true;
-            document.getElementById("scissor").disabled = true;
             document.getElementById("pop").style.display = 'block';
             document.getElementById("score").innerHTML = `${playerScore} || ${computerScore}`;
-            end()
+
 
     }
     return
 }
 initializeGame();
-function end(){
-    return
-}
